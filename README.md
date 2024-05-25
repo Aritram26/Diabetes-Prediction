@@ -27,25 +27,28 @@ The target variable is a binary outcome indicating the presence or absence of di
 
 To use the diabetes prediction model, you need to install the required dependencies. You can do this using the following command:
 
-```bash
+```
+bash
 pip install -r requirements.txt
 ```
-Requirements
+## Requirements
 The following Python libraries are required to run the project:
 
-```Flask==2.0.2
+```
+Flask==2.0.2
 numpy==1.21.1
 pandas==1.3.1
 scikit-learn==0.24.2 
 ```
 You can install these dependencies using the pip install -r requirements.txt command.
 
-Contributing
+## Contributing
 ```
 Contributions to improve the model or add new features are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 ```
-License
-```This project is licensed under the MIT License.
+## License
+```
+This project is licensed under the MIT License.
 Feel free to customize this template further to better suit your project's specifics. Once you're satisfied with the content, save it as `README.md` in the root directory of your GitHub repository.
 
 ```
