@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Diabetes Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="preg">Pregnancies:</label>
+            <input type="number" id="preg" name="preg" required><br>
+            <label for="plas">Plasma Glucose:</label>
+            <input type="number" id="plas" name="plas" required><br>
+            <label for="pres">Blood Pressure:</label>
+            <input type="number" id="pres" name="pres" required><br>
+            <label for="skin">Skin Thickness:</label>
+            <input type="number" id="skin" name="skin" required><br>
+            <label for="test">Insulin:</label>
+            <input type="number" id="test" name="test" required><br>
+            <label for="mass">BMI:</label>
+            <input type="number" id="mass" name="mass" step="0.1" required><br>
+            <label for="pedi">Diabetes Pedigree Function:</label>
+            <input type="number" id="pedi" name="pedi" step="0.001" required><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
